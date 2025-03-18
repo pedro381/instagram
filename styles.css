@@ -19,7 +19,197 @@ body {
     height: 932px;
     background-color: #fff;
     border: 1px solid #dbdbdb;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+header .logo {
+    height: 30px;
+}
+
+header .icons img {
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Seção de Stories */
+.stories {
+    display: flex;
+    padding: 10px 15px;
+    overflow-x: auto;
+    border-bottom: 1px solid #dbdbdb;
+    overflow: hidden;
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari e Opera */
+  }
+
+.story {
+    text-align: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.story img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #c13584; /* Efeito similar ao dos stories do Instagram */
+}
+
+.story p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Seção de Posts */
+/* Seção de Posts - apenas essa área terá rolagem */
+.posts {
+    flex: 1;
+    padding: 10px 15px;
+    overflow-y: auto;
+    overflow-y: auto;
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .posts::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari e Opera */
+  }
+
+.post {
+    margin-bottom: 20px;
+    border: 1px solid #efefef;
+    background-color: #fff;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-header img {
+    width: 40px !important;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-header p {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.post-header span {
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.post img {
+    width: 100%;
+    display: block;
+}
+
+.post-icons {
+    display: flex;
+    padding: 5px;
+    border-top: 1px solid #efefef;
+}
+
+.post-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.post-icons-curtir{
+    width: 10%;
+}
+
+.post-icons-comentar{
+    width: 10%;
+}
+
+.post-icons-salvar{
+    display: flex;
+    width: 80%;
+    justify-content: end;
+}
+
+.post-footer {
+    align-items: center;
+    padding: 5px;
+}
+
+.post-footer img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.post-footer p {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.post-footer span {
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.post-footer div {
+    width: 100%;
+}
+
+.post-footer-likes{
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+  }
+  
+  .post-footer-likes img {
+    margin-right: 8px; /* Espaçamento entre a imagem e o texto */
+  }
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #dbdbdb;
+    background-color: #fff;
+    position: sticky;
+    bottom: 0;
+}
+/* Footer - removendo o sticky */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #dbdbdb;
+    background-color: #fff;
+    /* Removido: position: sticky; bottom: 0; */
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
