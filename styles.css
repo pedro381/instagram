@@ -55,7 +55,7 @@ header .icons img {
   }
   
   .container::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari e Opera */
+    display: none; 
   }
 
 .story {
